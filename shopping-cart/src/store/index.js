@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
 
   state: { // = data
+    count: 0,
     products: []
   },
 
@@ -26,6 +27,9 @@ export default new Vuex.Store({
     setProducts (state, products) {
       // update product
       state.products = products
+    },
+    increment (state) {
+      state.count++
     }
   }
 })

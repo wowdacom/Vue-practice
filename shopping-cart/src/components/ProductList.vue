@@ -4,6 +4,7 @@
     <ul>
       <li v-for="product in products">{{ product.title }} - {{ product.price }}</li>
     </ul>
+    <button type="button" name="button" @click="productAdd">{{  }}</button>
   </div>
 </template>
 <script>
@@ -20,6 +21,11 @@ export default {
     shop.getProducts((products)=>{
       store.commit('setProducts', products)
     })
+  },
+  methods: {
+    productAdd() {
+      store.commit('increment')
+    }
   }
 }
 </script>
